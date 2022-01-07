@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% if essay["label"]=="pos" %}
+           {{prediction_text}} 
+           <img src="static/images/positive.png" alt="positive image" width="500" height="600">
+    {% elif essay["label"]=="neg" %}
+        {{prediction_text}}
+    {% else %}
+        {{prediction_text}} 
+    {% endif %}
+</body>
+</html>
