@@ -1,4 +1,4 @@
-Instruction to run the application
+Instructions to run the application
 
 Add following to the config file
 

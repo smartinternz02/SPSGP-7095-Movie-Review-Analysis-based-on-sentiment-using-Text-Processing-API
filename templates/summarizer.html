@@ -1,21 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Review Analysis</title>
+
+  <style>
+    .header {
+      background: #41AEA9;
+      /* color: rgb(175, 235, 229); */
+      padding: 20px;
+      /* text-align: center; */
+      border-radius: 15px;
+      font-family: "Roboto", "Segoe UI", Arial, sans-serif;
+    }
+
+    #form {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+      width: fit-content;
+      position: absolute;
+      left: 30%;
+    }
+
+    .textarea {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 3px solid #ccc;
+      -webkit-transition: 0.2s;
+      transition: 0.2s;
+      outline: none;
+    }
+
+    .textarea:focus {
+      border: 3px solid #41AEA9;
+    }
+
+    .submit {
+      background-color: white;
+      color: black;
+      border: 2px solid #41AEA9;
+      border-radius: 6px;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      transition-duration: 0.2s;
+      cursor: pointer;
+      position: relative;
+      left: 35%;
+    }
+
+    .submit:hover {
+      background-color: #41AEA9;
+    }
+  </style>
 </head>
+
 <body>
 
-<h2>Movie Review Analysis</h2>
-<p>Use this application to check wheter the review is positive, Negative, or Neutral</p>
-
-<form  action="/summarize" method="post">
-  <textarea name="output" rows="10" cols="30" required></textarea>
-  <br><br>
-  <input type="submit" value="Analyze">
-</form>
+  <div class="header">
+    <h1>Movie Review Analysis</h1>
+  </div>
+  <div>
+    <p>Use this application to check whether the review is positive, Negative, or Neutral</p>
+  </div>
+  <div id="form">
+    <form action="/summarize" method="post">
+      <textarea class="textarea" name="output" rows="15" cols="60" required></textarea>
+      <br><br>
+      <input class="submit" type="submit" value="Analyze">
+    </form>
+  </div>
 
 </body>
+
 </html>

@@ -4,16 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Movie Review Analysis</title>
+
+    <style>
+        .header {
+        background: #41AEA9;
+        /* color: rgb(175, 235, 229); */
+        padding: 20px;
+        text-align: center;
+        border-radius: 15px;
+        font-family: "Roboto", "Segoe UI", Arial, sans-serif;
+        }
+
+      </style>
+
 </head>
 <body>
-    {% if essay["label"]=="pos" %}
-           {{prediction_text}} 
-           <img src="static/images/positive.png" alt="positive image" width="500" height="600">
-    {% elif essay["label"]=="neg" %}
-        {{prediction_text}}
-    {% else %}
-        {{prediction_text}} 
-    {% endif %}
+    <div class="header">
+        <h1>Movie Review Analysis</h1>        
+    </div>
+    <div>
+        {% if essay["label"]=="pos" %}
+            {{prediction_text}} 
+            <img src="static/images/positive.png" alt="positive image" width="400" height="400">
+        {% elif essay["label"]=="neg" %}
+            {{prediction_text}}
+            <img src="static/images/negative.png" alt="positive image" width="400" height="400">
+        {% else %}
+            {{prediction_text}}
+            <img src="static/images/neutral.png" alt="positive image" width="400" height="400"> 
+        {% endif %}
+    </div>
 </body>
 </html>
